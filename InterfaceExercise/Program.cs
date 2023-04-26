@@ -7,22 +7,37 @@ namespace InterfaceExercise
     {
         static void Main(string[] args)
         {
-            Car MyPrius = new Car();
-            Suv MyRav4 = new Suv();
-            Truck Cybertruck = new Truck();
+            Car MyPrius = new Car() //dot notation
+            {
+                EngineCylinders = 4,
+                Color = "Blue",
+                ManufacturerName = "Toyota",
+                IsElctric = true
+            };
+            Suv MyRav4 = new Suv(); //object initializer syntax
+                MyRav4.SunRoof = true;
+                MyRav4.NumberOfWheels = 4;
+                MyRav4.SunRoof = true;
+                MyRav4.AllWheelDrive = true;
 
-            var vehicles = new List<IVehicle>() { MyPrius, MyRav4, Cybertruck };
+            Truck CyberTruck = new Truck(); //custom constructor
+
+            var vehicles = new List<IVehicle>() { MyPrius, MyRav4, CyberTruck };
 
             foreach (var vehicle in vehicles) 
             {
-                vehicle.Drive();
+                Console.WriteLine($"Color: {vehicle.Color}");
+                Console.WriteLine($"Number of Wheels: {vehicle.NumberOfWheels}");
+                Console.WriteLine($"Engine Cylinders: {vehicle.EngineCylinders}");
+                Console.WriteLine($"Sunroof: {vehicle.SunRoof}");
+                Console.WriteLine();
             }
 
             Console.ReadLine();
-            //TODO Be sure to follow BEST PRACTICES when creating classes and interfaces
         }
     }
 }
+            //TODO Be sure to follow BEST PRACTICES when creating classes and interfaces
 
             //DONE - Create 2 Interfaces called IVehicle & ICompany
 

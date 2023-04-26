@@ -16,7 +16,7 @@ namespace InterfaceExercise
         }
 
         public bool SunRoof { get; set; }
-        public int EngineCylinders { get; set; } = 0;
+        public int EngineCylinders { get; set; } = 8;
         public string Color { get; set; } = "Grey";
         public int NumberOfWheels { get; set; } = 2;
         public string ManufacturerName { get; set; } = "Tesla";

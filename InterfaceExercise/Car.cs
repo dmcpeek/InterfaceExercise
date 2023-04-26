@@ -23,8 +23,8 @@ namespace InterfaceExercise
 
 
         //Car specific
-        public bool hastrunk { get; set; } = true;
-        public bool iselectric { get; set; } = false;
+        public bool HasTrunk { get; set; } = true; //Property
+        public bool IsElctric { get; set; } = false;
 
         public void Drive()
         {
